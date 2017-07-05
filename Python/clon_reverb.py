@@ -4,13 +4,6 @@ from numpy import array
 from scipy.signal import lfilter
 import librosa
 
-# Ensure correct input size
-input.shape = original.shape
-# Get input length in samples
-inputLength = len(input)
-# Initialize output array
-output = zeros(input.shape)
-
 carpeta='/Users/Fede/Desktop/The Turn of a Friendly Card 1979 (GPF)/Canciones del trabajo/'
 filename='10'
 formato='.mp3'
