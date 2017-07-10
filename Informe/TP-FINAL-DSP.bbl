@@ -1,0 +1,42 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{none}{none}
+    \entry{lathi}{book}{}
+      \name{author}{2}{}{%
+        {{hash=7cea2ce3e8ca32a142767b5de598a5bf}{Lathi}{L\bibinitperiod}{B.P.}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=8f3234399fd6fd80ca6fca7eef56113d}{Green}{G\bibinitperiod}{Roger\bibnamedelima A.}{R\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{56b69f3e08217dff94fea58f022cf7fb}
+      \strng{fullhash}{56b69f3e08217dff94fea58f022cf7fb}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781107059320}
+      \field{title}{Essentials of Digital Signal Processing}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

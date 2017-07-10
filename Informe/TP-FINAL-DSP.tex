@@ -1,0 +1,138 @@
+\documentclass[]{article}
+%\documentclass[journal,10pt,draftclsnofoot,onecolumn]{IEEEtran}
+%\usepackage{graphics,multirow,amsmath,amssymb,textcomp,subfigure,multirow,xspace,arydshln,cite}
+
+\usepackage[]{graphicx}   % para manejar graficos
+
+\usepackage[space]{grffile} % para manejar graficos
+
+\usepackage{caption}
+
+\usepackage{enumerate}    % para hacer listas numeradas
+
+\usepackage{amsmath}        % no se..
+
+\usepackage{amsfonts}     % no se..
+
+\usepackage{authblk}    % para definir las afiliaciones de cada autor
+
+\usepackage{layout}     % no se..
+
+\usepackage{lineno}
+
+\usepackage[sorting=none]{biblatex}   % para manejar la bibliografia / referencias
+
+\usepackage{lipsum}     % para generar texto random
+
+\usepackage{multicol}   % para usar dos columnas
+
+\usepackage{palatino}   % para que la fuente sea palatino
+
+\usepackage[utf8]{inputenc} % para poder usar tildes
+
+\usepackage[spanish]{babel} % para escribir en español
+
+\addto\captionsspanish{\def\tablename{Tabla}} % cambiar ``cuadro'' por ``Tabla''
+
+\usepackage[sc,big,raggedright,bf]{titlesec} % para definir el formato del header de cada seccion.
+
+\usepackage[font=small]{caption} % para que la fuente de un epigrafe no tenga el mismo tamaño que el cuerpo del texto
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ textwidth={17cm},
+ textheight={23cm},
+ left={2cm},
+ top={2.5cm},
+ }
+
+\setlength{\columnsep}{1cm} % para que la separacion entre columnas sea de 1 cm
+
+\graphicspath {{imagenes/}}
+
+\defbibheading{bibliography}{\section{\refname}} % para que bibtex no imponga su header cuando uso \printbibliography, y que se use el de babel
+
+\addbibresource{bibliografia.bib} % para importar el archivo .bib
+
+\title{\textbf{\LARGE{\textsf{IMPLEMENTACIÓN DE UN REVERBERADOR DIGITAL DE SCHROEDER}}}}
+ % defino el titulo del Paper
+
+\date{} % lo pongo vacio para que no aparezca abajo del abstract
+
+\newcommand{\figura}[3]{
+\begin{figurehere}
+\centering
+\includegraphics[width=\linewidth]{#1}
+\captionof{figure}{#2}
+\label{#3}
+\end{figurehere}
+}
+\newcommand{\tabla}[4]{
+\begin{tablehere}
+\begin{center}
+\begin{tabular}{#1}
+#2
+\end{tabular}
+\caption{#3}
+\label{#4}
+\end{center}
+\end{tablehere}
+}
+
+\usepackage{fancyhdr}
+
+\usepackage{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/multicol_hint.html
+\makeatletter           % esto lo uso para poder definir figuras
+\newenvironment{tablehere}    % esto lo uso para poder definir figuras
+  {\def\@captype{table}}    % esto lo uso para poder definir figuras
+
+  {}              % esto lo uso para poder definir figuras
+                  % esto lo uso para poder definir figuras
+\newenvironment{figurehere}   % esto lo uso para poder definir figuras
+  {\def\@captype{figure}}   % esto lo uso para poder definir figuras
+  {\par\medskip}
+  {}              % esto lo uso para poder definir figuras
+\makeatother          % esto lo uso para poder definir figuras
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               ACA EMPIEZA EL DOCUMENTO                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document} % empieza el documentoo
+
+
+\renewcommand{\headrulewidth}{0pt} % para que no haya linea decorativa en el header.
+
+
+\author[1]{Federico Feldsberg} % defino el autor
+\affil[1]{Universidad Nacional de Tres De Febrero, Buenos Aires, Argentina \newline \texttt{fedefelds@hotmail.com}} % afiliacion del autor
+
+
+\begin{minipage}[h]{\textwidth} % uso el entorno minipage para que el abstract este en la misma pagina que el titulo
+    \maketitle
+    \thispagestyle{fancy}
+    \fancyhf{}
+    \rhead{\today}
+    \lhead{Procesamiento digital de señales}
+    \cfoot{\thepage}
+
+\end{minipage}
+
+
+\begin{abstract}
+
+\textit{\lipsum[1]}
+\end{abstract}
+
+\vspace{0.8 cm}% Additional space between abstract & rest of document
+
+\begin{multicols}{2}
+En 1961, Schroder y Logan dieron \cite{lathi}
+\printbibliography
+\end{multicols}
+\end{document}

@@ -20,6 +20,8 @@ num1 = append(0, zeros(R[0] - 1)); # parece que agrega un delay
 num1 = append(num1, 1);
 den1 = append(1, zeros(R[0] - 1));
 den1 = append(den1, -a[0]);
+print(num1)
+print(den1)
 d1 = lfilter(num1, den1, input)
 num2 = append(0, zeros(R[1] - 1));
 num2 = append(num2, 1);
