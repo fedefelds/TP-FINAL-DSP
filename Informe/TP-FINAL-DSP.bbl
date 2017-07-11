@@ -80,6 +80,23 @@
       \field{year}{2014}
       \warn{\item Overwriting field 'year' with year value from field 'date' for entry 'Reiss'}
     \endentry
+    \entry{lathi}{book}{}
+      \name{author}{2}{}{%
+        {{hash=7cea2ce3e8ca32a142767b5de598a5bf}{Lathi}{L\bibinitperiod}{B.P.}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=8f3234399fd6fd80ca6fca7eef56113d}{Green}{G\bibinitperiod}{Roger\bibnamedelima A.}{R\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{56b69f3e08217dff94fea58f022cf7fb}
+      \strng{fullhash}{56b69f3e08217dff94fea58f022cf7fb}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781107059320}
+      \field{title}{Essentials of Digital Signal Processing}
+    \endentry
   \endsortlist
 \endrefsection
 \endinput

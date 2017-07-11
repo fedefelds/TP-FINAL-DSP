@@ -138,7 +138,7 @@ En los años 60, Schroeder y Logan propusieron un arreglo
 capaz de generar la respuesta ``Natural'' de una sala reverberante
 \cite{schroeder1961,schroeder1962}. El término ``natural'' implica una falta de coloración espectral y una alta
 concentración de ecos por segundo. Schroeder y Logan señalan que los métodos de
-reverberación disponibles en su momento carecian de dicha no ``naturalidad''.
+reverberación disponibles en su momento carecian de dicha ``naturalidad''.
 
 Este desarrollo resulto ser sumamente valioso debido a que el mismo fue capaz de
 suplir ambas falencias de las técnicas de reverberación disponibles en su momento.
@@ -147,8 +147,8 @@ En una primer aproximación, Schroeder y Logan proponen una linea de retardo rea
 ilustrada en la figura \ref{fig:mk2}:
 
 \figura
-{prueba}
-{Linea de retardo realimentada}
+{mk2}
+{Linea de retardo realimentada \cite{Reiss}.}
 {fig:mk2}
 La respuesta al impulso de dicho sistema esta dada por:
 \begin{equation}
@@ -164,42 +164,118 @@ este primer sistema posee un alto grado de coloración. Esto se debe a que el mi
 se asemeja a un filtro peine y es por ello que dicho sistema no es un candidato de
 reverberador ``natural''.
 
-El gran avance de Scrhoeder consiste en haber descubierto que al hacer ciertas
+El gran avance de Scrhoeder y Logan consiste en haber descubierto que al hacer ciertas
 modificaciones al sistema presentado en la figura \ref{eq:mk2}, es posible
-lograr una respuesta plana y por lo tanto carente de color.
+lograr una respuesta plana y por lo tanto carente de coloración.
 Para lograr dicha respuesta en frecuencia, se combinan la señal sin procesar y
 la señal procesada mediante cierto criterio establecido por Schroeder y Logan.
 
 Con estas modificaciones, se obtiene el sistema ilustrado en la figura \ref{fig:mk3}:
 \figura
-{prueba}
-{Unidad básica de reverberación}
+{mk3}
+{Unidad básica de reverberación \cite{Reiss}.}
 {fig:mk3}
 
 La respuesta en frecuencia de dicho sistema resulta ser plana, pero en si misma
 no es capaz de generar una gran densidad de eco. Schroeder y Logan recomiendan
 un valor minimo de 1000 ecos por segundo. Podemos decir que el sistema presentado
-en la figura \ref{fig:mk3} constituye una unidad básica de reverberación.
+en la figura \ref{fig:mk3} constituye una unidad básica de reverberación, cuya
+respuesta en frecuencia es plana.
 
-Para solucionar esto ultimo, Schroeder y Logan proponen el siguiente arreglo:
+De ahora en adelante, nos referiremos a toda unidad básica de reverberación como
+filtro pasa-todo.
+
+Para solucionar la escasa densidad de ecos, Schroeder y Logan proponen el siguiente arreglo:
 
 \figura
 {mk4}
-{Diagrama en bloques del sistema \cite{schroeder1962}.}
+{Diagrama en bloques del sistema \cite{schroeder1962}. HAY QUE CAMBIAR ESTA FIGURAAA}
 {fig:mk4}
 
-El mismo presenta un arreglo en paralelo de filtros peine y dos unidades básicas
-de reverberación en serie.
+El mismo esta compuesto por tres secciones: La primer sección consta de un banco
+de filtros peine en paralelo, tales como los de la figura \ref{fig:mk2}, por el
+cual ingresa la señal a procesar. Todos los elementos del sistema pueden ser caracterizados
+en función de su ganancia de realimentación $g_i$ y su retardo $\tau_i$ con
+$1 \leq i \leq 4$. Los valores de dichos parametros estan dados por:
 
-To insure a sufficient echo density several all-pass rever-
-berators of the kind shown in Fig. 2 have to be connected in series with the comb filters. The number of echoes per
-'second of a comb filter having a delay of 0.04 sec is 25. Four such comb filters in parallel give 100 echoes per second,
-which is short by a factor of 10 from the goal of 1,000 echoes per second. Thus, two all-pass reverberator units, each
-multiplying the number of echoes by about 3, are requ
-Según Reiss,\cite[pp. 10--15]{Reiss}
+\begin{equation}
+  T=\frac{3 \: \tau_i}{-\log|g_i|}
+\end{equation}
+y
+\begin{equation}
+  \tau_i \quad \text{Entre 30 y 45 mseg}
+\end{equation}
+Donde $T$ es el tiempo de reverberación.
+Esta primer sección no tiene una respuesta en frecuencia plana, sino que al ser una
+conexión en paralelo de varios filtros peine, es esperable que sea bastante irregular \cite[446]{lathi}.
+Este desvío de la respuesta plana esta justificado por experimentos desarrollados
+en los laboratorios de Bell. Estos experimentos indicarían que el oido humano no es capaz de
+distinguir entre una sala con respuesta plana y una sala con una gran cantidad
+de irregularidades en su respuesta en frecuencia.
 
-\section{Implementaciónes}
-\lipsum[2]
+La segunda sección consta de dos de filtros pasa-todo conectados en serie cuyos valores de
+$\tau_i$ oscilan entre 5 y 1.7 mseg. A su vez, se sugiere que $g_{5}$ y $g_{6}$ sean
+iguales a 0,7.
+
+La tercera y última sección consiste de una etapa de ganancia $g_7$ la cual permite
+determinar la mezcla entre señal reverberada y no reverberada.
+
+
+\section{Implementación}
+Para la implementación se siguieron las sugerencias de Reiss \cite[259]{Reiss}.
+El diagrama en bloques de la implementación presentada es muy similar al de la
+figura \ref{fig:mk4}:
+
+\figura
+{mk5}
+{Implementación presentada en \cite{Reiss}}
+{fig:mk5}
+
+
+
+
+
+La única diferencia entre los diagramas de las figuras \ref{fig:mk5} y \ref{fig:mk4}
+es que este último no contempla la tercer etapa, cuyo fin es permitir mezclar la
+señal reverberada y la señal no reverberada.
+
+En el dominio $z$, un filtro peine como el de la figura \ref{fig:mk2} esta dado por:
+\begin{equation}
+  FBCF_{d}^g=\frac{z^{-d}-g}{1-g\:z^{-d}}
+  \label{eq:fbcf}
+\end{equation}
+
+mientras que un filtro pasa-todo como el de la figura \ref{fig:mk3} esta dado
+por \begin{equation}
+  AP_{d}^g=\frac{z^{-d}}{1-g\:z^{-d}}
+  \label{eq:ap}
+\end{equation}
+
+Se puede ver que las ecuaciones \eqref{eq:fbcf} y \eqref{eq:ap} estan expresadas
+en funcion de la ganancia de realimentación $g$ y cantidad de muestras $d$.
+Por otro lado, schroeder siempre habla en terminos de
+milisegundos. Es por eso que se debe convertir entre segundos a muestras mediante
+la siguente ecuación:
+\begin{equation}
+d_i=\tau_i \cdot F_s
+\end{equation}
+
+Se recurrio al entorno de programación Python, el cual permite una rápida
+implementación de filtros FIR e IIR mediante el método \emph{lfilter}, disponible
+en la libreria \emph{Scipy}. Este método permite cargar los coeficientes del numerador
+y denominador de la ecuación que representa al sistema a implementar. Por lo tanto
+se desarrollaron dos scripts diferentes. El primer script recibe como argumentos de entrada
+la cantidad de segundos de retardo, la ganancia de realimentación y la señal a
+filtrar. El mismo script devuelve la señal filtrada por un filtro pasa-todo que
+diseñado en función de los dos primeros argumentos de entrada. El segundo script
+posee argumentos de entrada y salida similares a los anteriores. La única diferencia
+entre ambos es que este segundo script implementa un filtro peine.
+
+% Para la ecuación 5, los valores de $d_i$ sugeridos son números primos
+% The delay line lengths di are typically mutually prime and spanning suc- cessive orders of magnitude. The 100 ms value was chosen so that when g = 0.708 in Equation (11.10), the time to decay 60 dB (T60) would be 2 s. Thus, for i = 0, T60 ~ 2, and each successive allpass has an impulse response duration that is about a third of the previous one.
+
+
+%  Criticas: no es una caida exponenial, falta de difusion (sch.1962)
 \printbibliography
 \end{multicols}
 \end{document}
