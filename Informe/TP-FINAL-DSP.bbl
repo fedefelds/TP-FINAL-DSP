@@ -19,22 +19,66 @@
 
 \refsection{0}
   \sortlist{none}{none}
-    \entry{lathi}{book}{}
+    \entry{schroeder1961}{article}{}
       \name{author}{2}{}{%
-        {{hash=7cea2ce3e8ca32a142767b5de598a5bf}{Lathi}{L\bibinitperiod}{B.P.}{B\bibinitperiod}{}{}{}{}}%
-        {{hash=8f3234399fd6fd80ca6fca7eef56113d}{Green}{G\bibinitperiod}{Roger\bibnamedelima A.}{R\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{hash=09afda9265c236b02f00153c514895a8}{Schroeder}{S\bibinitperiod}{Manfred\bibnamedelima R}{M\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{hash=603e80f849a10215dfac6e72eba5d36e}{Logan}{L\bibinitperiod}{Benjamin\bibnamedelima F}{B\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
       }
       \list{publisher}{1}{%
-        {Cambridge University Press}%
+        {IEEE}%
       }
-      \strng{namehash}{56b69f3e08217dff94fea58f022cf7fb}
-      \strng{fullhash}{56b69f3e08217dff94fea58f022cf7fb}
+      \strng{namehash}{754606d67c9ac41d6393417e0230038b}
+      \strng{fullhash}{754606d67c9ac41d6393417e0230038b}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{9781107059320}
-      \field{title}{Essentials of Digital Signal Processing}
+      \field{journaltitle}{IRE Transactions on Audio}
+      \field{number}{6}
+      \field{title}{Colorless artificial reverberation}
+      \field{volume}{9}
+      \field{year}{1961}
+      \field{pages}{209\bibrangedash 214}
+      \range{pages}{6}
+    \endentry
+    \entry{schroeder1962}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=09afda9265c236b02f00153c514895a8}{Schroeder}{S\bibinitperiod}{Manfred\bibnamedelima R}{M\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {Audio Engineering Society}%
+      }
+      \strng{namehash}{09afda9265c236b02f00153c514895a8}
+      \strng{fullhash}{09afda9265c236b02f00153c514895a8}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Audio Engineering Society Convention 13}
+      \field{title}{Natural sounding artificial reverberation}
+      \field{year}{1961}
+    \endentry
+    \entry{Reiss}{book}{}
+      \name{author}{2}{}{%
+        {{hash=7f89aea3a24b386b0d2b71acb711b33b}{Reiss}{R\bibinitperiod}{Joshua\bibnamedelima D.}{J\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{hash=a391b484b1a961dbf21e17ab613d9b44}{McPherson}{M\bibinitperiod}{Andrew}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis Inc}%
+      }
+      \strng{namehash}{5a11a01b5e9bf8a783ee0d7759a44352}
+      \strng{fullhash}{5a11a01b5e9bf8a783ee0d7759a44352}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{07}
+      \field{isbn}{9781466560284}
+      \field{month}{11}
+      \field{pagetotal}{367}
+      \field{title}{Audio Effects}
+      \field{year}{2014}
+      \warn{\item Overwriting field 'year' with year value from field 'date' for entry 'Reiss'}
     \endentry
   \endsortlist
 \endrefsection

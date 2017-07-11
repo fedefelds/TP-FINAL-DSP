@@ -132,7 +132,74 @@
 \vspace{0.8 cm}% Additional space between abstract & rest of document
 
 \begin{multicols}{2}
-En 1961, Schroder y Logan dieron \cite{lathi}
+\section{Marco teórico}
+
+En los años 60, Schroeder y Logan propusieron un arreglo
+capaz de generar la respuesta ``Natural'' de una sala reverberante
+\cite{schroeder1961,schroeder1962}. El término ``natural'' implica una falta de coloración espectral y una alta
+concentración de ecos por segundo. Schroeder y Logan señalan que los métodos de
+reverberación disponibles en su momento carecian de dicha no ``naturalidad''.
+
+Este desarrollo resulto ser sumamente valioso debido a que el mismo fue capaz de
+suplir ambas falencias de las técnicas de reverberación disponibles en su momento.
+
+En una primer aproximación, Schroeder y Logan proponen una linea de retardo realimentada,
+ilustrada en la figura \ref{fig:mk2}:
+
+\figura
+{prueba}
+{Linea de retardo realimentada}
+{fig:mk2}
+La respuesta al impulso de dicho sistema esta dada por:
+\begin{equation}
+  h(t)=\sum_{n=0}^{\infty}\:g^n \:
+  \delta(t-n\:\tau)\quad \text{con} \quad |g|<1
+  \label{eq:mk2}
+\end{equation}
+
+En el dominio temporal, la ecuación \ref{eq:mk2} se asemeja a una cantidad infinita
+de impulsos, desplazados y escalados por un factor que decrece exponencialmente. Es por eso
+que parece ser un resultado valioso. Sin embargo, en el dominio de la frecuencia,
+este primer sistema posee un alto grado de coloración. Esto se debe a que el mismo
+se asemeja a un filtro peine y es por ello que dicho sistema no es un candidato de
+reverberador ``natural''.
+
+El gran avance de Scrhoeder consiste en haber descubierto que al hacer ciertas
+modificaciones al sistema presentado en la figura \ref{eq:mk2}, es posible
+lograr una respuesta plana y por lo tanto carente de color.
+Para lograr dicha respuesta en frecuencia, se combinan la señal sin procesar y
+la señal procesada mediante cierto criterio establecido por Schroeder y Logan.
+
+Con estas modificaciones, se obtiene el sistema ilustrado en la figura \ref{fig:mk3}:
+\figura
+{prueba}
+{Unidad básica de reverberación}
+{fig:mk3}
+
+La respuesta en frecuencia de dicho sistema resulta ser plana, pero en si misma
+no es capaz de generar una gran densidad de eco. Schroeder y Logan recomiendan
+un valor minimo de 1000 ecos por segundo. Podemos decir que el sistema presentado
+en la figura \ref{fig:mk3} constituye una unidad básica de reverberación.
+
+Para solucionar esto ultimo, Schroeder y Logan proponen el siguiente arreglo:
+
+\figura
+{mk4}
+{Diagrama en bloques del sistema \cite{schroeder1962}.}
+{fig:mk4}
+
+El mismo presenta un arreglo en paralelo de filtros peine y dos unidades básicas
+de reverberación en serie.
+
+To insure a sufficient echo density several all-pass rever-
+berators of the kind shown in Fig. 2 have to be connected in series with the comb filters. The number of echoes per
+'second of a comb filter having a delay of 0.04 sec is 25. Four such comb filters in parallel give 100 echoes per second,
+which is short by a factor of 10 from the goal of 1,000 echoes per second. Thus, two all-pass reverberator units, each
+multiplying the number of echoes by about 3, are requ
+Según Reiss,\cite[pp. 10--15]{Reiss}
+
+\section{Implementaciónes}
+\lipsum[2]
 \printbibliography
 \end{multicols}
 \end{document}
