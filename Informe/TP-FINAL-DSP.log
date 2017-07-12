@@ -246,7 +246,7 @@ Package: biblatex 2015/04/19 v3.0 programmable bibliographies (PK/JW/AB)
 
 
 Package biblatex Warning: No "backend" specified, using Biber backend.
-(biblatex)                To use BibTeX, load biblatex with 
+(biblatex)                To use BibTeX, load biblatex with
 (biblatex)                the "backend=bibtex" option.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex2.sty
@@ -410,7 +410,7 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.def
-File: biblatex.def 
+File: biblatex.def
 \c@textcitecount=\count283
 \c@textcitetotal=\count284
 \c@textcitemaxnames=\count285
@@ -453,7 +453,7 @@ Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.cfg
-File: biblatex.cfg 
+File: biblatex.cfg
 )))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
@@ -509,7 +509,7 @@ Package: multicol 2015/03/31 v1.8m multicolumn formatting (FMi)
 \mc@col@check@num=\count301
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/palatino.sty
-Package: palatino 2005/04/12 PSNFSS-v9.2a (SPQR) 
+Package: palatino 2005/04/12 PSNFSS-v9.2a (SPQR)
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
@@ -981,7 +981,7 @@ LaTeX Info: Redefining \% on input line 106.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
+* modes:
 * h-part:(L,W,R)=(56.9055pt, 483.69684pt, 56.90553pt)
 * v-part:(T,H,B)=(71.13188pt, 654.41338pt, 119.50159pt)
 * \paperwidth=597.50787pt
@@ -1053,7 +1053,7 @@ LaTeX Font Info:    Try loading font information for OT1+pcr on input line 118.
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 Overfull \hbox (15.0pt too wide) in paragraph at lines 116--125
-[]$[]$ 
+[]$[]$
  []
 
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9> not available
@@ -1236,7 +1236,7 @@ Package rerunfilecheck Info: File `TP-FINAL-DSP.out' has not changed.
 Package logreq Info: Writing requests to 'TP-FINAL-DSP.run.xml'.
 \openout1 = `TP-FINAL-DSP.run.xml'.
 
- ) 
+ )
 Here is how much of TeX's memory you used:
  14711 strings out of 493089
  233273 string characters out of 6134842
@@ -1264,4 +1264,3 @@ PDF statistics:
  105 compressed objects within 2 object streams
  21 named destinations out of 1000 (max. 500000)
  45 words of extra memory for PDF output out of 10000 (max. 10000000)
-
