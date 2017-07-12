@@ -12,22 +12,18 @@ filename='/Users/Fede/Documents/Github/TP-FINAL-DSP/Python/raw.mp3'
 # cargar audio
 y, sr = librosa.load(filename)
 
-
-def ap(g,d,y):
-    num=zeros(d+1)
+def ap(g,n,y):
+    num=zeros(n+1)
+    num[0]=-g
     num[len(num)-1]=1
-    den=zeros(d+1)
-    den[0]=1
-    den[len(num)-1]=-g
+    den=flipud(num)
     y1=lfilter(num,den,y)
-    # print(num)
-    # print(den)
     return y1
 
-def fbcf(g,d,y):
-    num=zeros(d+1)
+def fbcf(g,n,y):
+    num=zeros(n+1)
     num[0]=1
-    den=zeros(d+1)
+    den=zeros(n+1)
     den[0]=1
     den[len(num)-1]=-g
     y1=lfilter(num,den,y)
@@ -56,8 +52,8 @@ y_rev=ap(g[6],d[6],y_rev)
 y_rev=0.5*y_rev+y
 y_rev=0.2*y_rev
 librosa.output.write_wav('raw.wav', y, sr)
-librosa.output.write_wav('y_1.wav', y_1, sr)
-librosa.output.write_wav('y_2.wav', y_2, sr)
-librosa.output.write_wav('y_3.wav', y_3, sr)
-librosa.output.write_wav('y_4.wav', y_4, sr)
+# librosa.output.write_wav('y_1.wav', y_1, sr)
+# librosa.output.write_wav('y_2.wav', y_2, sr)
+# librosa.output.write_wav('y_3.wav', y_3, sr)
+# librosa.output.write_wav('y_4.wav', y_4, sr)
 librosa.output.write_wav('rev.wav', y_rev, sr)
