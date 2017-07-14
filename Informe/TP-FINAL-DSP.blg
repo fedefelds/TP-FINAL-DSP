@@ -1,16 +1,16 @@
 [0] Config.pm:324> INFO - This is Biber 2.1
 [0] Config.pm:327> INFO - Logfile is 'TP-FINAL-DSP.blg'
-[41] biber-darwin:276> INFO - === Tue Jul 11, 2017, 10:01:47
-[41] Biber.pm:333> INFO - Reading 'TP-FINAL-DSP.bcf'
-[133] Biber.pm:645> INFO - Found 4 citekeys in bib section 0
-[150] Biber.pm:2977> INFO - Processing section 0
-[165] Biber.pm:3115> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
-[167] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
-[169] bibtex.pm:895> INFO - Found BibTeX data source 'bibliografia.bib'
-[176] Utils.pm:146> WARN - Overwriting field 'year' with year value from field 'date' for entry 'Reiss'
-[222] UCollate.pm:66> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[222] UCollate.pm:66> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[222] Biber.pm:2854> INFO - Sorting list 'none' of type 'entry' with scheme 'none' and locale 'es-ES'
-[227] bbl.pm:505> INFO - Writing 'TP-FINAL-DSP.bbl' with encoding 'UTF-8'
-[228] bbl.pm:596> INFO - Output to TP-FINAL-DSP.bbl
-[228] Biber.pm:106> INFO - WARNINGS: 1
+[45] biber-darwin:276> INFO - === Thu Jul 13, 2017, 09:53:27
+[45] Biber.pm:333> INFO - Reading 'TP-FINAL-DSP.bcf'
+[157] Biber.pm:645> INFO - Found 5 citekeys in bib section 0
+[184] Biber.pm:2977> INFO - Processing section 0
+[207] Biber.pm:3115> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
+[209] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[211] bibtex.pm:895> INFO - Found BibTeX data source 'bibliografia.bib'
+[219] Utils.pm:146> WARN - Overwriting field 'year' with year value from field 'date' for entry 'Reiss'
+[294] UCollate.pm:66> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[294] UCollate.pm:66> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[294] Biber.pm:2854> INFO - Sorting list 'none' of type 'entry' with scheme 'none' and locale 'es-ES'
+[301] bbl.pm:505> INFO - Writing 'TP-FINAL-DSP.bbl' with encoding 'UTF-8'
+[301] bbl.pm:596> INFO - Output to TP-FINAL-DSP.bbl
+[302] Biber.pm:106> INFO - WARNINGS: 1

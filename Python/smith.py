@@ -8,12 +8,12 @@ from scipy.signal import lfilter
 import matplotlib.pyplot as plt
 import scipy as sp
 
-filename='/Users/Fede/Documents/Github/TP-FINAL-DSP/Python/raw.mp3'
-# filename='/Users/Fede/Documents/Github/TP-FINAL-DSP/Python/raww.mp3'
+# filename='/Users/Fede/Documents/Github/TP-FINAL-DSP/Python/raw.mp3'
+filename='/Users/Fede/Documents/Github/TP-FINAL-DSP/Python/raww.mp3'
 
 # cargar audio
 y, sr = librosa.load(filename)
-filtros viejos (smith)
+# filtros viejos (smith)
 
 # Parametros para smith
 g=array([0.805,0.827,0.783,0.764,0.7,0.7,0.7])

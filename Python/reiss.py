@@ -17,6 +17,7 @@ y, sr = librosa.load(filename)
 g=array([0.7,0.7,0.7,0.7,0.7,0.7,0.7])
 tau=array([0.1,0.03,0.01,0.003,0.001,0.0004,0.0001])
 d=tau*sr
+d=d.astype(int)
 
 def ap(g,n,y):
     num=zeros(n+1)

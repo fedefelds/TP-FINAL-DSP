@@ -12,6 +12,12 @@ filename='/Users/Fede/Documents/Github/TP-FINAL-DSP/Python/raw.mp3'
 # cargar audio
 y, sr = librosa.load(filename)
 
+#filtros nuevos (reiss)
+# parametros para Reiss
+g=array([0.7,0.7,0.7,0.7,0.7,0.7,0.7])
+tau=array([0.1,0.03,0.01,0.003,0.001])
+d=tau*sr
+
 def ap(g,n,y):
     num=zeros(n+1)
     num[0]=-g
@@ -29,11 +35,32 @@ def fbcf(g,n,y):
     y1=lfilter(num,den,y)
     return y1
 
-# g=array([0.773,0.802,0.753,0.733,0.7,0.7,0.7])
-# tau=array([0.1,0.03,0.01,0.003,0.001])
-# d=tau*sr
-g=array([0.805,0.827,0.783,0.764,0.7,0.7,0.7])
-d=array([901,778,1011,1123,125,42,12])
+
+# filtros viejos (smith)
+# Parametros para smith
+# g=array([0.805,0.827,0.783,0.764,0.7,0.7,0.7])
+# d=array([901,778,1011,1123,125,42,12])
+
+# def ap(g,n,y):
+# 	    num=zeros(n+1)
+# 	    num[0]=-g
+# 	    num[len(num)-1]=1
+# 	    den=flipud(num)
+# 	    y1=lfilter(num,den,y)
+# 	    return y1
+#
+#
+# def fbcf(g,n,y):
+#     num=zeros(n+1)
+#     num[0]=1
+#     den=zeros(n+1)
+#     den[0]=1
+#     den[len(num)-1]=-g
+#     y1=lfilter(num,den,y)
+#     return y1
+
+########################Empieza el filtrado#####################################
+
 # # filtrado en paralelo x4:
 y_1=fbcf(g[0],d[0],y)
 y_2=fbcf(g[1],d[1],y)
@@ -56,4 +83,4 @@ librosa.output.write_wav('raw.wav', y, sr)
 # librosa.output.write_wav('y_2.wav', y_2, sr)
 # librosa.output.write_wav('y_3.wav', y_3, sr)
 # librosa.output.write_wav('y_4.wav', y_4, sr)
-librosa.output.write_wav('rev.wav', y_rev, sr)
+librosa.output.write_wav('reiss_opera_rev.wav', y_rev, sr)

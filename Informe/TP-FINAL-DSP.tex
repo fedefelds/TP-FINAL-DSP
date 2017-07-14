@@ -222,7 +222,22 @@ determinar la mezcla entre señal reverberada y no reverberada.
 
 
 \section{Implementación}
-Para la implementación se siguieron las sugerencias de Reiss \cite[259]{Reiss}.
+Para la implementación se recurrió al entorno de programación Python, el cual
+permite una rápida implementación de filtros FIR e IIR mediante el método \emph{lfilter}, disponible
+en la libreria \emph{Scipy}.
+
+Dado un sistema S cuya función de transferencia sea de la forma:
+\begin{equation}
+  H_S(z)=\frac{\sum_{i=0}^{D} a_i \: z^{-i} }{\sum_{i=0}^{D} b_i \: z^{-i}}
+\end{equation}
+Dicho sistema puede ser implementado al especificar los coeficientes $a_i$ y $b_i$.
+
+Por lo tanto, se implementaron los filtros peine y los filtros pasa-todo mediante
+dos funciones diferentes. La primer función recibe como argumentos de entrada
+la cantidad de retardo, la ganancia de realimentación y la señal a
+filtrar. El mismo script devuelve la señal filtrada por el filtro correspondiente.
+
+En primer lugar, se siguieron las sugerencias de Reiss \cite[259]{Reiss}.
 El diagrama en bloques de la implementación presentada es muy similar al de la
 figura \ref{fig:mk4}:
 
@@ -232,47 +247,47 @@ figura \ref{fig:mk4}:
 {fig:mk5}
 
 
-
-
-
 La única diferencia entre los diagramas de las figuras \ref{fig:mk5} y \ref{fig:mk4}
 es que este último no contempla la tercer etapa, cuyo fin es permitir mezclar la
 señal reverberada y la señal no reverberada.
 
-En el dominio $z$, un filtro peine como el de la figura \ref{fig:mk2} esta dado por:
-\begin{equation}
-  FBCF_{d}^g=\frac{z^{-d}-g}{1-g\:z^{-d}}
-  \label{eq:fbcf}
-\end{equation}
-
-mientras que un filtro pasa-todo como el de la figura \ref{fig:mk3} esta dado
+En el dominio $z$, un  filtro pasa-todo como el de la figura \ref{fig:mk3} esta dado
 por \begin{equation}
-  AP_{d}^g=\frac{z^{-d}}{1-g\:z^{-d}}
-  \label{eq:ap}
+  AP_{d}^g=\frac{z^{-d}-g}{1-g\:z^{-d}}
+  \label{eq:ap_reiss}
 \end{equation}
 
-Se puede ver que las ecuaciones \eqref{eq:fbcf} y \eqref{eq:ap} estan expresadas
-en funcion de la ganancia de realimentación $g$ y cantidad de muestras $d$.
-Por otro lado, schroeder siempre habla en terminos de
-milisegundos. Es por eso que se debe convertir entre segundos a muestras mediante
+mientras que un filtro peine como el de la figura \ref{fig:mk2} esta dado por:
+\begin{equation}
+  FBCF_{d}^g=\frac{z^{-d}}{1-g\:z^{-d}}
+  \label{eq:fbcf_reiss}
+\end{equation}
+
+Se puede ver que las ecuaciones \eqref{eq:fbcf_reiss} y \eqref{eq:ap_reiss} estan expresadas
+en función de la ganancia de realimentación $g$ y cantidad de muestras $d$.
+Por otro lado, al hablar de retardos Schroeder siempre habla en terminos de
+milisegundos. Es por eso que al trabajar en el dominio digital, se debe convertir  segundos a muestras mediante
 la siguente ecuación:
 \begin{equation}
 d_i=\tau_i \cdot F_s
 \end{equation}
+Donde el numero de muestras equivalentes a un retardo de $\tau_i$ segundos
+es función de la frecuencia de muestreo $F_s$
 
-Se recurrio al entorno de programación Python, el cual permite una rápida
-implementación de filtros FIR e IIR mediante el método \emph{lfilter}, disponible
-en la libreria \emph{Scipy}. Este método permite cargar los coeficientes del numerador
-y denominador de la ecuación que representa al sistema a implementar. Por lo tanto
-se desarrollaron dos scripts diferentes. El primer script recibe como argumentos de entrada
-la cantidad de segundos de retardo, la ganancia de realimentación y la señal a
-filtrar. El mismo script devuelve la señal filtrada por un filtro pasa-todo que
-diseñado en función de los dos primeros argumentos de entrada. El segundo script
-posee argumentos de entrada y salida similares a los anteriores. La única diferencia
-entre ambos es que este segundo script implementa un filtro peine.
+Cabe destacar que la ecuación \ref{eq:fbcf_reiss} no es la única implementación
+posible de un filtro peine: En \cite{smith}, Smith propone la siguiente función
+de transferencia:
 
+\begin{equation}
+FBCF_{d}^g=\frac{1}{1-g\:z^{-d}}
+\end{equation}
+
+En el caso de la implementación del filtro pasa-todo la Tanto Reiss como Smith
+proponen la misma función de transferencia, dada por la ecuación
+\eqref{eq:ap_reiss}.
 % Para la ecuación 5, los valores de $d_i$ sugeridos son números primos
 % The delay line lengths di are typically mutually prime and spanning suc- cessive orders of magnitude. The 100 ms value was chosen so that when g = 0.708 in Equation (11.10), the time to decay 60 dB (T60) would be 2 s. Thus, for i = 0, T60 ~ 2, and each successive allpass has an impulse response duration that is about a third of the previous one.
+\section{Análisis de los resultados}
 
 
 %  Criticas: no es una caida exponenial, falta de difusion (sch.1962)

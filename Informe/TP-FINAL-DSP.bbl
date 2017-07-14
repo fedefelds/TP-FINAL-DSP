@@ -97,6 +97,23 @@
       \field{isbn}{9781107059320}
       \field{title}{Essentials of Digital Signal Processing}
     \endentry
+    \entry{smith}{book}{}
+      \name{author}{1}{}{%
+        {{hash=13ae98f0b097f0dbd677f1fa2777e4df}{III}{I\bibinitperiod}{Julius\bibnamedelimb O.\bibnamedelimi Smith}{J\bibinitperiod\bibinitdelim O\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {\url{https://ccrma.stanford.edu/~jos/pasp/Schroeder_Reverberators.html}}%
+      }
+      \strng{namehash}{13ae98f0b097f0dbd677f1fa2777e4df}
+      \strng{fullhash}{13ae98f0b097f0dbd677f1fa2777e4df}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{online book, 2010 edition}
+      \field{title}{Physical Audio Signal Processing}
+      \field{year}{revisado el \today}
+    \endentry
   \endsortlist
 \endrefsection
 \endinput
