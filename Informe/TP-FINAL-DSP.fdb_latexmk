@@ -1,12 +1,12 @@
 # Fdb version 3
-["biber TP-FINAL-DSP"] 1500122163 "TP-FINAL-DSP.bcf" "TP-FINAL-DSP.bbl" "TP-FINAL-DSP" 1500125981
-  "TP-FINAL-DSP.bcf" 1500125981 100544 b9c8500736ff4a3cbbbd9c03652a88f2 ""
+["biber TP-FINAL-DSP"] 1500122163 "TP-FINAL-DSP.bcf" "TP-FINAL-DSP.bbl" "TP-FINAL-DSP" 1500138070
+  "TP-FINAL-DSP.bcf" 1500138070 100544 b9c8500736ff4a3cbbbd9c03652a88f2 ""
   "bibliografia.bib" 1499946806 1358 e74c38c09eaa503e6c112605a7de7090 ""
   (generated)
-  "TP-FINAL-DSP.bbl"
   "TP-FINAL-DSP.blg"
-["pdflatex"] 1500125979 "TP-FINAL-DSP.tex" "TP-FINAL-DSP.pdf" "TP-FINAL-DSP" 1500125981
-  "./TP-FINAL-DSP.out" 1500125981 213 adb6a06f090215ff088a632dea72c1c5 ""
+  "TP-FINAL-DSP.bbl"
+["pdflatex"] 1500138069 "TP-FINAL-DSP.tex" "TP-FINAL-DSP.pdf" "TP-FINAL-DSP" 1500138070
+  "./TP-FINAL-DSP.out" 1500138070 213 adb6a06f090215ff088a632dea72c1c5 ""
   "./imagenes/mk2.png" 1499769790 25685 9092433212462b0c3da012240d0dcf8a ""
   "./imagenes/mk3.png" 1499769782 44929 9997dc263df5eec9cacbeb4cfd70e085 ""
   "./imagenes/mk4.png" 1499970313 97402 e35b196f7d2d0b754c647900400648fa ""
@@ -145,19 +145,19 @@
   "/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1432479641 1764542 91654ba72bdb667e84ea24f076ae16d8 ""
   "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1461447283 3849859 d06f0633cadadb6f745f20b80feff1a8 ""
   "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
-  "TP-FINAL-DSP.aux" 1500125981 3590 b22aca0fceb4297a315f2f1d03fb45f4 ""
+  "TP-FINAL-DSP.aux" 1500138070 3590 b22aca0fceb4297a315f2f1d03fb45f4 ""
   "TP-FINAL-DSP.bbl" 1500122164 4811 cbda8c66c49fe620081acd8b1040beea "biber TP-FINAL-DSP"
-  "TP-FINAL-DSP.out" 1500125981 213 adb6a06f090215ff088a632dea72c1c5 ""
-  "TP-FINAL-DSP.run.xml" 1500125981 2363 fdbf56177c3dbb02aecacdd8bf96716c ""
-  "TP-FINAL-DSP.tex" 1500125978 11874 ecd4684774949ae466d7bcc1a60cb491 ""
+  "TP-FINAL-DSP.out" 1500138070 213 adb6a06f090215ff088a632dea72c1c5 ""
+  "TP-FINAL-DSP.run.xml" 1500138070 2363 fdbf56177c3dbb02aecacdd8bf96716c ""
+  "TP-FINAL-DSP.tex" 1500138068 11993 3739e8fa0af9a83146d3210b0476dc8d ""
   "imagenes/mk2.png" 1499769790 25685 9092433212462b0c3da012240d0dcf8a ""
   "imagenes/mk3.png" 1499769782 44929 9997dc263df5eec9cacbeb4cfd70e085 ""
   "imagenes/mk4.png" 1499970313 97402 e35b196f7d2d0b754c647900400648fa ""
   "imagenes/mk5.png" 1499777107 72700 1b315d479d90a20d2e70e706c478594c ""
   (generated)
-  "TP-FINAL-DSP.run.xml"
-  "TP-FINAL-DSP.log"
-  "TP-FINAL-DSP.pdf"
   "TP-FINAL-DSP.aux"
-  "TP-FINAL-DSP.bcf"
   "TP-FINAL-DSP.out"
+  "TP-FINAL-DSP.pdf"
+  "TP-FINAL-DSP.log"
+  "TP-FINAL-DSP.bcf"
+  "TP-FINAL-DSP.run.xml"

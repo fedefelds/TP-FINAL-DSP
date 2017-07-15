@@ -11,6 +11,11 @@ filename='/Users/Fede/Documents/Github/TP-FINAL-DSP/Python/raw.mp3'
 # cargar audio
 y, sr = librosa.load(filename)
 
+################################################################################
+#							filtros (smith)
+# 		https://ccrma.stanford.edu/~jos/pasp/Schroeder_Reverberators.html
+################################################################################
+
 
 def ap(g,n,y):
     num=zeros(n+1)
@@ -50,4 +55,4 @@ d=s_1-s_2
 c=-d
 caca=x_1+x_2+x_3+x_4
 
-librosa.output.write_wav('caca.wav',caca, sr)
+librosa.output.write_wav('Ap.wav',caca, sr)

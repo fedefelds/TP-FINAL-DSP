@@ -131,8 +131,8 @@ diferentes reverberadores digitales basados en las investigaciones de Schroeder 
 Utilizando filtros peine y filtros pasa~-todo se desarrollaron 3 implementaciónes
 distintas basadas en las sugerencias de Smith y Reiss. Se obtuvieron resultados variados y poco satisfactorios:
 En las tres implementaciónes desarrolladas no se lograron resultados aceptables a la
-hora de procesar sonidos impulsivos. En el caso de sonidos un poco mas largos los resultados
-fueron
+hora de procesar sonidos impulsivos. En el caso de sonidos un poco mas largos, los resultados
+fueron relativamente superiores.
  }
 \end{abstract}
 
@@ -176,8 +176,8 @@ modificaciones al sistema presentado en la figura \ref{eq:mk2}, es posible
 lograr una respuesta plana y por lo tanto carente de coloración.
 Para lograr dicha respuesta en frecuencia, se combinan la señal sin procesar y
 la señal procesada mediante cierto criterio establecido por Schroeder y Logan.
-
 Con estas modificaciones, se obtiene el sistema ilustrado en la figura \ref{fig:mk3}:
+
 \figura
 {mk3}
 {Unidad básica de reverberación \cite{Reiss}.}
@@ -239,10 +239,11 @@ Dado un sistema S cuya función de transferencia sea de la forma:
 \end{equation}
 Dicho sistema puede ser implementado al especificar los coeficientes $a_i$ y $b_i$.
 
-Por lo tanto, se implementaron los filtros peine y los filtros pasa-todo mediante
-dos funciones diferentes. La primer función recibe como argumentos de entrada
-la cantidad de retardo, la ganancia de realimentación y la señal a
-filtrar. El mismo script devuelve la señal filtrada por el filtro correspondiente.
+Por lo tanto, cada una de las implementaciones se basaron en \emph{lfilter}.
+Tanto los filtros peine como los filtros pasa~-todo se implementaron como
+funciones y por lo tanto pueden ser vistos como tal. De ese modo, dicha función
+recibe como argumentos de entrada el tiempo de retardo, la ganancia de realimentación
+y la señal a procesar y devuelve la señal procesada por el filtro correspondiente.
 
 En primer lugar, se siguieron las sugerencias de Reiss \cite[259]{Reiss}.
 El diagrama en bloques de la implementación presentada es muy similar al de la
@@ -260,7 +261,7 @@ señal reverberada y la señal no reverberada. Esta etapa si fue considerada en
 este trabajo.
 
 En el dominio $z$, un  filtro pasa-todo como el de la figura \ref{fig:mk3} esta dado
-por \begin{equation}
+por: \begin{equation}
   AP_{d}^g=\frac{z^{-d}-g}{1-g\:z^{-d}}
   \label{eq:ap_reiss}
 \end{equation}
@@ -273,9 +274,9 @@ mientras que un filtro peine como el de la figura \ref{fig:mk2} esta dado por:
 
 Se puede ver que las ecuaciones \eqref{eq:fbcf_reiss} y \eqref{eq:ap_reiss} estan expresadas
 en función de la ganancia de realimentación $g$ y cantidad de muestras $d$.
-Por otro lado, al hablar de retardos Schroeder siempre habla en terminos de
-milisegundos. Es por eso que al trabajar en el dominio digital, se debe convertir  segundos a muestras mediante
-la siguente ecuación:
+Por otro lado, al hablar de retardos, Schroeder siempre habla en términos de
+milisegundos. Es por eso que al trabajar en el dominio digital, se debe convertir
+segundos a muestras mediante la siguente ecuación:
 \begin{equation}
 d_i=\tau_i \cdot F_s
 \end{equation}
