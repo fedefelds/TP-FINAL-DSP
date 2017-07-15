@@ -126,7 +126,14 @@
 
 \begin{abstract}
 
-\textit{\lipsum[1]}
+\textit{Este trabajo se propone como objetivo estudiar, implementar y analizar
+diferentes reverberadores digitales basados en las investigaciones de Schroeder y Logan.
+Utilizando filtros peine y filtros pasa~-todo se desarrollaron 3 implementaciónes
+distintas basadas en las sugerencias de Smith y Reiss. Se obtuvieron resultados variados y poco satisfactorios:
+En las tres implementaciónes desarrolladas no se lograron resultados aceptables a la
+hora de procesar sonidos impulsivos. En el caso de sonidos un poco mas largos los resultados
+fueron
+ }
 \end{abstract}
 
 \vspace{0.8 cm}% Additional space between abstract & rest of document
@@ -189,7 +196,7 @@ Para solucionar la escasa densidad de ecos, Schroeder y Logan proponen el siguie
 
 \figura
 {mk4}
-{Diagrama en bloques del sistema \cite{schroeder1962}. HAY QUE CAMBIAR ESTA FIGURAAA}
+{Diagrama en bloques del sistema propuesto por Schroeder y Logan \cite{schroeder1962}.}
 {fig:mk4}
 
 El mismo esta compuesto por tres secciones: La primer sección consta de un banco
@@ -249,7 +256,8 @@ figura \ref{fig:mk4}:
 
 La única diferencia entre los diagramas de las figuras \ref{fig:mk5} y \ref{fig:mk4}
 es que este último no contempla la tercer etapa, cuyo fin es permitir mezclar la
-señal reverberada y la señal no reverberada.
+señal reverberada y la señal no reverberada. Esta etapa si fue considerada en
+este trabajo.
 
 En el dominio $z$, un  filtro pasa-todo como el de la figura \ref{fig:mk3} esta dado
 por \begin{equation}
